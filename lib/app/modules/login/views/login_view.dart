@@ -11,7 +11,7 @@ class LoginView extends GetView<LoginController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.lightBlue[100],
+        backgroundColor: Colors.white,
         body: Container(
           margin: context.isPhone
               ? EdgeInsets.all(Get.width * 0.1)
@@ -27,7 +27,9 @@ class LoginView extends GetView<LoginController> {
                     decoration: const BoxDecoration(
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(50),
-                          bottomLeft: Radius.circular(50)),
+                          bottomLeft: Radius.circular(50),
+                          topRight: Radius.circular(50),
+                          bottomRight: Radius.circular(50)),
                       color: Colors.blue,
                     ),
                     child: const Padding(

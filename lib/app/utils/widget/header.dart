@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:task_management_app/app/routes/app_pages.dart';
+import 'package:task_management_app/app/utils/style/AppColors.dart';
 
 class header extends StatelessWidget {
   const header({
@@ -13,23 +14,27 @@ class header extends StatelessWidget {
     return SizedBox(
       height: Get.height * 0.1,
       child: Padding(
-        padding: const EdgeInsets.only(left: 40, right: 40, top: 25),
+        padding: const EdgeInsets.only(left: 40, right: 40, top: 15),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Column(
-              // mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Task Management',
-                  style: TextStyle(fontSize: 20, color: Colors.grey),
-                ),
-                Text(
-                  'Manage Task Made Easy With Friends',
-                  style: TextStyle(fontSize: 15, color: Colors.grey),
-                ),
-              ],
+            const Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Task Management',
+                    style:
+                        TextStyle(fontSize: 30, color: AppColors.primaryBgText),
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                  Text(
+                    'Manage Task Made Easy With Friends',
+                    style:
+                        TextStyle(fontSize: 12, color: AppColors.primaryBgText),
+                  ),
+                ],
+              ),
             ),
             const Spacer(flex: 1),
             Expanded(
@@ -37,15 +42,16 @@ class header extends StatelessWidget {
               child: TextField(
                 decoration: InputDecoration(
                   filled: true,
-                  fillColor: Colors.white,
+                  fillColor: AppColors.primaryBgText,
                   contentPadding: const EdgeInsets.only(left: 40, right: 10),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(30),
-                    borderSide: const BorderSide(color: Colors.white),
+                    borderSide: const BorderSide(color: Colors.black),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(30),
-                    borderSide: const BorderSide(color: Colors.blue),
+                    borderSide:
+                        const BorderSide(color: AppColors.primaryBgText),
                   ),
                   prefixIcon: const Icon(
                     Icons.search,
@@ -60,7 +66,8 @@ class header extends StatelessWidget {
             ),
             const Icon(
               Ionicons.notifications,
-              color: Colors.grey,
+              color: AppColors.primaryBgText,
+              size: 30,
             ),
             const SizedBox(
               width: 20,
@@ -84,12 +91,14 @@ class header extends StatelessWidget {
                 children: [
                   Text(
                     "Sign Out",
-                    style: TextStyle(color: Colors.grey),
+                    style:
+                        TextStyle(color: AppColors.primaryBgText, fontSize: 18),
                   ),
                   SizedBox(
                     width: 5,
                   ),
-                  Icon(Ionicons.log_out_outline, color: Colors.grey),
+                  Icon(Ionicons.log_out_outline,
+                      color: AppColors.primaryBgText),
                 ],
               ),
             ),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:task_management_app/app/routes/app_pages.dart';
+import 'package:task_management_app/app/utils/style/AppColors.dart';
 
 class Sidebar extends StatelessWidget {
   const Sidebar({
@@ -14,7 +15,7 @@ class Sidebar extends StatelessWidget {
       elevation: 0,
       child: Container(
         height: Get.height,
-        color: Colors.lightBlue[100],
+        color: AppColors.primaryBg,
         child: SingleChildScrollView(
             child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -43,13 +44,13 @@ class Sidebar extends StatelessWidget {
                       decoration: Get.currentRoute == '/home'
                           ? BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              color: Colors.white)
+                              color: Colors.black)
                           : const BoxDecoration(),
                       child: Icon(
                         Get.currentRoute == '/home'
-                            ? Ionicons.home
-                            : Ionicons.home,
-                        color: Colors.grey,
+                            ? Ionicons.home_outline
+                            : Ionicons.home_outline,
+                        color: AppColors.primaryBgText,
                       ),
                     ),
                     const SizedBox(
@@ -57,7 +58,8 @@ class Sidebar extends StatelessWidget {
                     ),
                     const Text(
                       'Home',
-                      style: TextStyle(color: Colors.grey, fontSize: 16),
+                      style: TextStyle(
+                          color: AppColors.primaryBgText, fontSize: 16),
                     ),
                   ]),
                   onTap: () => Get.toNamed(Routes.HOME),
@@ -75,13 +77,13 @@ class Sidebar extends StatelessWidget {
                       decoration: Get.currentRoute == '/task'
                           ? BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              color: Colors.white)
+                              color: Colors.black)
                           : const BoxDecoration(),
                       child: Icon(
                         Get.currentRoute == '/task'
                             ? Ionicons.cube
                             : Ionicons.cube_outline,
-                        color: Colors.grey,
+                        color: AppColors.primaryBgText,
                       ),
                     ),
                     const SizedBox(
@@ -89,7 +91,8 @@ class Sidebar extends StatelessWidget {
                     ),
                     const Text(
                       'Task',
-                      style: TextStyle(color: Colors.grey, fontSize: 16),
+                      style: TextStyle(
+                          color: AppColors.primaryBgText, fontSize: 16),
                     ),
                   ]),
                   onTap: () => Get.toNamed(Routes.TASK),
@@ -107,13 +110,13 @@ class Sidebar extends StatelessWidget {
                       decoration: Get.currentRoute == '/friends'
                           ? BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              color: Colors.white)
+                              color: Colors.black)
                           : const BoxDecoration(),
                       child: Icon(
                         Get.currentRoute == '/friends'
                             ? Ionicons.heart
                             : Ionicons.heart_outline,
-                        color: Colors.grey,
+                        color: AppColors.primaryBgText,
                       ),
                     ),
                     const SizedBox(
@@ -121,7 +124,8 @@ class Sidebar extends StatelessWidget {
                     ),
                     const Text(
                       'Friends',
-                      style: TextStyle(color: Colors.grey, fontSize: 16),
+                      style: TextStyle(
+                          color: AppColors.primaryBgText, fontSize: 16),
                     ),
                   ]),
                   onTap: () => Get.toNamed(Routes.FRIENDS),
@@ -139,13 +143,13 @@ class Sidebar extends StatelessWidget {
                       decoration: Get.currentRoute == '/profile'
                           ? BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              color: Colors.white)
+                              color: Colors.black)
                           : const BoxDecoration(),
                       child: Icon(
                         Get.currentRoute == '/profile'
                             ? Ionicons.person
                             : Ionicons.person_outline,
-                        color: Colors.grey,
+                        color: AppColors.primaryBgText,
                       ),
                     ),
                     const SizedBox(
@@ -153,7 +157,8 @@ class Sidebar extends StatelessWidget {
                     ),
                     const Text(
                       'profile',
-                      style: TextStyle(color: Colors.grey, fontSize: 16),
+                      style: TextStyle(
+                          color: AppColors.primaryBgText, fontSize: 16),
                     ),
                   ]),
                   onTap: () => Get.toNamed(Routes.PROFILE),
