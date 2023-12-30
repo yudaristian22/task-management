@@ -485,18 +485,52 @@ class HomeView extends GetView<HomeController> {
                                               ),
                                             ),
                                             Text(
-                                              'More',
+                                              'more',
                                               style: TextStyle(
                                                 color: AppColors.primaryBg,
                                                 fontSize: 30,
                                               ),
                                             ),
                                             Icon(
-                                              Ionicons.arrow_forward,
+                                              Ionicons.chevron_forward,
                                               color: AppColors.primaryBg,
                                             )
                                           ],
                                         ),
+                                        SizedBox(
+                                          height: 20,
+                                        ),
+                                        SizedBox(
+  height: 400,
+  child: GridView.builder(
+    shrinkWrap: true,
+    itemCount: 8,
+    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+      crossAxisCount: 3,
+      crossAxisSpacing: 20,
+      mainAxisSpacing: 20,
+    ),
+    itemBuilder: (context, index) {
+      return Column(
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(30),
+            child: const CircleAvatar(
+              radius: 20,
+              foregroundImage: NetworkImage(
+                'https://i.ibb.co/KXZD6vt/pexels-wendy-wei-1656684.jpg',
+              ),
+            ),
+          ),
+          Text(
+            'Alicia Jasmin',
+            style: TextStyle(color: AppColors.primaryBgText),
+          ),
+        ],
+      );
+    },
+  ),
+);
                                       ],
                                     ),
                                   ),
