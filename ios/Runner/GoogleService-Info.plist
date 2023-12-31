@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyB0P5xxI-bJC0uXK7g_E0IDSFXyrNxqE8c</string>
+	<key>GCM_SENDER_ID</key>
+	<string>477525148582</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.taskapp</string>
+	<key>PROJECT_ID</key>
+	<string>taskapp-5c0f7</string>
+	<key>STORAGE_BUCKET</key>
+	<string>taskapp-5c0f7.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:477525148582:ios:8b2ed7dbc3a5026e078567</string>
+</dict>
+</plist>

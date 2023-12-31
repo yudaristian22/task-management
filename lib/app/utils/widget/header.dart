@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ionicons/ionicons.dart';
-import 'package:task_management_app/app/routes/app_pages.dart';
-import 'package:task_management_app/app/utils/style/AppColors.dart';
+import 'package:taskapp/app/routes/app_pages.dart';
+import 'package:taskapp/app/utils/style/AppColors.dart';
 
 class header extends StatelessWidget {
   const header({
@@ -14,27 +14,29 @@ class header extends StatelessWidget {
     return SizedBox(
       height: Get.height * 0.1,
       child: Padding(
-        padding: const EdgeInsets.only(left: 40, right: 40, top: 15),
+        padding: const EdgeInsets.only(left: 40, right: 40, top: 25),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Task Management',
-                    style:
-                        TextStyle(fontSize: 30, color: AppColors.primaryBgText),
-                    overflow: TextOverflow.ellipsis,
+            Column(
+              // mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Task Management',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: AppColors.primaryText,
                   ),
-                  Text(
-                    'Manage Task Made Easy With Friends',
-                    style:
-                        TextStyle(fontSize: 12, color: AppColors.primaryBgText),
+                ),
+                Text(
+                  'Manage task made easy with friends',
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: AppColors.primaryText,
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
             const Spacer(flex: 1),
             Expanded(
@@ -42,22 +44,23 @@ class header extends StatelessWidget {
               child: TextField(
                 decoration: InputDecoration(
                   filled: true,
-                  fillColor: AppColors.primaryBgText,
+                  fillColor: Colors.white,
                   contentPadding: const EdgeInsets.only(left: 40, right: 10),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(30),
-                    borderSide: const BorderSide(color: Colors.black),
+                    borderSide: const BorderSide(color: Colors.white),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(30),
-                    borderSide:
-                        const BorderSide(color: AppColors.primaryBgText),
+                    borderSide: const BorderSide(
+                      color: AppColors.primaryText,
+                    ),
                   ),
                   prefixIcon: const Icon(
                     Icons.search,
                     color: Colors.black,
                   ),
-                  hintText: "Search",
+                  hintText: 'Search',
                 ),
               ),
             ),
@@ -66,17 +69,17 @@ class header extends StatelessWidget {
             ),
             const Icon(
               Ionicons.notifications,
-              color: AppColors.primaryBgText,
+              color: AppColors.primaryText,
               size: 30,
             ),
             const SizedBox(
               width: 20,
             ),
-            GestureDetector(
-              onTap: () {
+            TextButton(
+              onPressed: () {
                 Get.defaultDialog(
                   title: 'Sign Out',
-                  content: const Text('Are ypu sure want to sign out?'),
+                  content: const Text('Are You Sure Want to Sign Out?'),
                   cancel: ElevatedButton(
                     onPressed: () => Get.back(),
                     child: const Text('Cancel'),
@@ -87,18 +90,23 @@ class header extends StatelessWidget {
                   ),
                 );
               },
-              child: const Row(
-                children: [
+              child: Row(
+                children: const [
                   Text(
-                    "Sign Out",
-                    style:
-                        TextStyle(color: AppColors.primaryBgText, fontSize: 18),
+                    'Sign Out',
+                    style: TextStyle(
+                      color: AppColors.primaryText,
+                      fontSize: 18,
+                    ),
                   ),
                   SizedBox(
                     width: 5,
                   ),
-                  Icon(Ionicons.log_out_outline,
-                      color: AppColors.primaryBgText),
+                  Icon(
+                    Ionicons.log_out_outline,
+                    color: AppColors.primaryText,
+                    size: 30,
+                  ),
                 ],
               ),
             ),

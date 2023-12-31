@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:task_management_app/app/utils/style/AppColors.dart';
+import 'package:taskapp/app/utils/style/AppColors.dart';
 
 class UpcomingTask extends StatelessWidget {
   const UpcomingTask({
@@ -27,14 +27,15 @@ class UpcomingTask extends StatelessWidget {
               height: 400,
               child: ListView(
                 clipBehavior: Clip.antiAlias,
-                scrollDirection: Axis.vertical,
+                // scrollDirection: Axis.vertical,
                 shrinkWrap: true,
                 children: [
                   Container(
                     height: 200,
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: AppColors.primaryBg),
+                      borderRadius: BorderRadius.circular(20),
+                      color: AppColors.primaryBg,
+                    ),
                     margin: const EdgeInsets.all(10),
                     padding: const EdgeInsets.all(20),
                     child: Column(
@@ -43,47 +44,51 @@ class UpcomingTask extends StatelessWidget {
                         Row(
                           children: [
                             ClipRRect(
-                              borderRadius: BorderRadius.circular(30),
+                              borderRadius: BorderRadius.circular(25),
                               child: const CircleAvatar(
+                                backgroundColor: Colors.amber,
                                 radius: 20,
                                 foregroundImage: NetworkImage(
-                                    'https://i.ibb.co/KXZD6vt/pexels-wendy-wei-1656684.jpg'),
+                                    'https://i.ibb.co/y0524ZF/Hero-Image.jpg'),
                               ),
                             ),
                             ClipRRect(
-                              borderRadius: BorderRadius.circular(30),
+                              borderRadius: BorderRadius.circular(25),
                               child: const CircleAvatar(
+                                backgroundColor: Colors.amber,
                                 radius: 20,
                                 foregroundImage: NetworkImage(
-                                    'https://i.ibb.co/KXZD6vt/pexels-wendy-wei-1656684.jpg'),
+                                    'https://i.ibb.co/y0524ZF/Hero-Image.jpg'),
                               ),
                             ),
                             const Spacer(),
                             Container(
                               height: 25,
                               width: 80,
-                              color: AppColors.secondaryBg,
+                              color: AppColors.primaryText,
                               child: const Center(
                                 child: Text(
                                   '100%',
                                   style: TextStyle(
-                                    color: AppColors.primaryBgText,
+                                    color: AppColors.primaryBg,
+                                    fontSize: 20,
                                   ),
                                 ),
                               ),
-                            )
+                            ),
                           ],
                         ),
                         const Spacer(),
                         Container(
                           height: 25,
                           width: 80,
-                          color: AppColors.secondaryBg,
+                          color: AppColors.primaryText,
                           child: const Center(
                             child: Text(
-                              '10/10 Task',
+                              '10 / 10 Task',
                               style: TextStyle(
-                                color: AppColors.primaryBgText,
+                                color: AppColors.primaryBg,
+                                fontSize: 20,
                               ),
                             ),
                           ),
@@ -91,12 +96,16 @@ class UpcomingTask extends StatelessWidget {
                         const Text(
                           'Pemrograman Mobile',
                           style: TextStyle(
-                              color: AppColors.primaryBgText, fontSize: 20),
+                            color: AppColors.primaryText,
+                            fontSize: 20,
+                          ),
                         ),
                         const Text(
                           'Deadline 2 Hari Lagi',
                           style: TextStyle(
-                              color: AppColors.primaryBgText, fontSize: 15),
+                            color: AppColors.primaryText,
+                            fontSize: 15,
+                          ),
                         )
                       ],
                     ),
@@ -104,8 +113,9 @@ class UpcomingTask extends StatelessWidget {
                   Container(
                     height: 200,
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: AppColors.primaryBg),
+                      borderRadius: BorderRadius.circular(20),
+                      color: AppColors.primaryBg,
+                    ),
                     margin: const EdgeInsets.all(10),
                     padding: const EdgeInsets.all(20),
                     child: Column(
@@ -114,47 +124,51 @@ class UpcomingTask extends StatelessWidget {
                         Row(
                           children: [
                             ClipRRect(
-                              borderRadius: BorderRadius.circular(30),
+                              borderRadius: BorderRadius.circular(25),
                               child: const CircleAvatar(
+                                backgroundColor: Colors.amber,
                                 radius: 20,
                                 foregroundImage: NetworkImage(
-                                    'https://i.ibb.co/KXZD6vt/pexels-wendy-wei-1656684.jpg'),
+                                    'https://i.ibb.co/y0524ZF/Hero-Image.jpg'),
                               ),
                             ),
                             ClipRRect(
-                              borderRadius: BorderRadius.circular(30),
+                              borderRadius: BorderRadius.circular(25),
                               child: const CircleAvatar(
+                                backgroundColor: Colors.amber,
                                 radius: 20,
                                 foregroundImage: NetworkImage(
-                                    'https://i.ibb.co/KXZD6vt/pexels-wendy-wei-1656684.jpg'),
+                                    'https://i.ibb.co/y0524ZF/Hero-Image.jpg'),
                               ),
                             ),
                             const Spacer(),
                             Container(
                               height: 25,
                               width: 80,
-                              color: AppColors.secondaryBg,
+                              color: AppColors.primaryText,
                               child: const Center(
                                 child: Text(
                                   '100%',
                                   style: TextStyle(
-                                    color: AppColors.primaryBgText,
+                                    color: AppColors.primaryBg,
+                                    fontSize: 20,
                                   ),
                                 ),
                               ),
-                            )
+                            ),
                           ],
                         ),
                         const Spacer(),
                         Container(
                           height: 25,
                           width: 80,
-                          color: AppColors.secondaryBg,
+                          color: AppColors.primaryText,
                           child: const Center(
                             child: Text(
-                              '10/10 Task',
+                              '10 / 10 Task',
                               style: TextStyle(
-                                color: AppColors.primaryBgText,
+                                color: AppColors.primaryBg,
+                                fontSize: 20,
                               ),
                             ),
                           ),
@@ -162,12 +176,16 @@ class UpcomingTask extends StatelessWidget {
                         const Text(
                           'Pemrograman Mobile',
                           style: TextStyle(
-                              color: AppColors.primaryBgText, fontSize: 20),
+                            color: AppColors.primaryText,
+                            fontSize: 20,
+                          ),
                         ),
                         const Text(
                           'Deadline 2 Hari Lagi',
                           style: TextStyle(
-                              color: AppColors.primaryBgText, fontSize: 15),
+                            color: AppColors.primaryText,
+                            fontSize: 15,
+                          ),
                         )
                       ],
                     ),
